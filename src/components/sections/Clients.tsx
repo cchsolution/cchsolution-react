@@ -1,12 +1,9 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const clients = [
-  { name: 'TaxiWale', initials: 'TW' },
-  { name: 'WAFA', initials: 'WA' },
-  { name: 'TechCorp', initials: 'TC' },
-  { name: 'Digital Plus', initials: 'D+' },
-  { name: 'CloudNet', initials: 'CN' },
-  { name: 'InnoTech', initials: 'IT' },
+  { name: "TaxiWale", initials: "Taxi-Wale-Logo-2" },
+  { name: "WAFA", initials: "WAFA_logo" },
+  { name: "Sabah", initials: "Sabah Logo color" },
 ];
 
 const Clients = () => {
@@ -24,10 +21,16 @@ const Clients = () => {
               whileHover={{ scale: 1.05 }}
               className="group cursor-pointer"
             >
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-xl bg-muted flex items-center justify-center border border-border group-hover:border-primary group-hover:shadow-card transition-all duration-300">
-                <span className="text-2xl md:text-3xl font-heading font-black text-muted-foreground group-hover:text-primary transition-colors">
-                  {client.initials}
-                </span>
+              <div
+                style={{ width: 240, height: 140 }}
+                className="rounded-xl bg-muted flex items-center justify-center border border-border group-hover:border-primary group-hover:shadow-card transition-all duration-300"
+              >
+                <img
+                  src={`images/clients/${client.initials}.png`}
+                  alt={client.name}
+                  className="object-contain"
+                  style={{maxWidth: '60%', maxHeight: '60%'}}
+                />
               </div>
             </motion.div>
           ))}

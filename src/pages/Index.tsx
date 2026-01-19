@@ -15,7 +15,6 @@ import Clients from '@/components/sections/Clients';
 const Index = () => {
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <Features />
@@ -28,7 +27,6 @@ const Index = () => {
         <Contact />
         <Clients />
       </main>
-      <Footer />
     </>
   );
 };

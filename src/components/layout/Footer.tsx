@@ -21,10 +21,7 @@ const Footer = () => {
             {/* Company Info */}
             <div>
               <Link to="/" className="inline-block mb-6">
-                <div className="text-2xl font-heading font-black">
-                  <span className="text-primary-foreground">CCH</span>
-                  <span className="text-accent">Solution</span>
-                </div>
+                <img src="images/logos/logo-light.png" alt="CCH Solution Logo" style={{maxWidth: 190}}/>
               </Link>
               <p className="text-primary-foreground/70 mb-6 leading-relaxed">
                 There are many variations of passages but the majority have suffered some form of 

@@ -18,28 +18,30 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32">
-        <div className="max-w-3xl">
+        <div className="">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white leading-tight mb-6"
+            style={{lineHeight: 1.2 , marginTop: 120 }}
+            className="text-4xl md:text-5xl  lg:text-7xl font-heading text-center w-50 font-black text-white leading-tight mb-6"
           >
-            We Build Technology That Works for You
+            We Build Technology <br/> That Works for You
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/80 mb-8 max-w-xl"
+            className="text-lg md:text-xl text-white/80 mb-8 text-center "
           >
-            We provide best technology and IT services around the world with more than 5+ years of experience
+            We provide best technology and IT services around the world with <br/> more than 5+ years of experience
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4"
+            style={{justifyContent: "center" , marginBottom: 130}}
           >
             <Button size="lg" variant="hero" className="group">
               Contact Us

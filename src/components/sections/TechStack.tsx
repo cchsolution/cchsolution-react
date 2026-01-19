@@ -1,24 +1,24 @@
 import { motion } from 'framer-motion';
 
 const techStack = [
-  { name: 'Artificial Intelligence', emoji: '🤖' },
-  { name: 'Amazon Web Services', emoji: '☁️' },
-  { name: 'Angular', emoji: '🔺' },
-  { name: 'React Js', emoji: '⚛️' },
-  { name: 'Vue.js', emoji: '💚' },
-  { name: 'ASP.NET', emoji: '🔵' },
-  { name: 'HTML5/CSS3', emoji: '🌐' },
-  { name: 'JavaScript', emoji: '💛' },
-  { name: 'Node.js', emoji: '💚' },
-  { name: 'Azure', emoji: '☁️' },
-  { name: 'Java', emoji: '☕' },
-  { name: 'Python', emoji: '🐍' },
-  { name: 'MySQL', emoji: '🐬' },
-  { name: 'MongoDB', emoji: '🍃' },
-  { name: 'Django/Flask', emoji: '🌿' },
-  { name: 'Swift / iOS', emoji: '🍎' },
-  { name: 'Go / Rust', emoji: '🦀' },
-  { name: 'Flutter', emoji: '💙' },
+  { name: 'Artificial Intelligence', emoji: 'ai.png' },
+  { name: 'Amazon Web Services', emoji: 'aws.png' },
+  { name: 'Angular', emoji: 'angular.png' },
+  { name: 'React Js', emoji: 'react.png' },
+  { name: 'Vue.js', emoji: 'vue-js.png' },
+  { name: 'ASP.NET', emoji: 'net.png' },
+  { name: 'HTML5/CSS3', emoji: 'html-css.png' },
+  { name: 'JavaScript', emoji: 'javascript.png' },
+  { name: 'Node.js', emoji: 'nodejs.png' },
+  { name: 'Azure', emoji: 'azure.png' },
+  { name: 'Java', emoji: 'java.png ' },
+  { name: 'Python', emoji: 'python.png' },
+  { name: 'MySQL', emoji: 'mysql.png' },
+  { name: 'MongoDB', emoji: 'mongodb.png' },
+  { name: 'Django/Flask', emoji: 'django.png' },
+  { name: 'Swift / iOS', emoji: 'swift.png' },
+  { name: 'Go / Rust', emoji: 'rust.png' },
+  { name: 'Flutter', emoji: 'flutter.png' },
 ];
 
 const TechStack = () => {
@@ -58,10 +58,10 @@ const TechStack = () => {
                   transition={{ duration: 0.3, delay: index * 0.03 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-card rounded-xl p-4 text-center shadow-card hover:shadow-primary transition-all duration-300 border border-border group cursor-pointer"
+                  className="bg-card rounded-xl p-4 text-center shadow-card hover:shadow-primary transition-all duration-300 border border-border group cursor-pointer skill-item "
                 >
-                  <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
-                    {tech.emoji}
+                  <div className="skill-icon">
+                    <img  src={`images/logos/${tech?.emoji}`} alt={tech.name} />
                   </div>
                   <p className="text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">
                     {tech.name}
