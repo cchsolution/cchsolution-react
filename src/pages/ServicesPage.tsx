@@ -158,7 +158,7 @@ const ServicesPage = () => {
       {/* ================= CTA ================= */}
       <section className="section-gap bg-gradient-to-r from-primary to-accent text-primary-foreground text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-black mb-4">
+          <h2 style={{color: "#fff"}} className="text-3xl md:text-4xl font-heading font-black mb-4">
             Let’s Build Something Great Together
           </h2>
           <p className="mb-8 text-primary-foreground/80">

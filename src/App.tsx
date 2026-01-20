@@ -12,6 +12,9 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import ContactPage from "./pages/ContactPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import WebDevelopment from "./pages/WebDevelopment";
+import MobileAppDevelopment from "./pages/MobileAppDevelopment";
+import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +33,9 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects" element={<ProjectsPage  />} />
+          <Route path="/services/web-development" element={<WebDevelopment  />} />
+          <Route path="/services/mobile-app" element={<MobileAppDevelopment  />} />
+          <Route path="/services/software-development" element={<SoftwareDevelopment   />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -21,7 +21,6 @@ const projects = [
     category: "Website Design",
     image: project3,
   },
-
 ];
 
 const categories = ["All", "Web", "Mobile", "Software", "Design"];
@@ -29,9 +28,11 @@ const categories = ["All", "Web", "Mobile", "Software", "Design"];
 const ProjectsPage = () => {
   return (
     <main className="overflow-hidden">
-
       {/* ================= HERO ================= */}
-      <section style={{marginTop: 100}} className="pt-32 pb-20 bg-gradient-to-br from-background to-muted text-center">
+      <section
+        style={{ marginTop: 100 }}
+        className="pt-32 pb-20 bg-gradient-to-br from-background to-muted text-center"
+      >
         <div className="container mx-auto px-4">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -43,30 +44,16 @@ const ProjectsPage = () => {
           </motion.h1>
 
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
-            A showcase of our recent work, innovative solutions, and successful client projects.
+            A showcase of our recent work, innovative solutions, and successful
+            client projects.
           </p>
         </div>
       </section>
 
       {/* ================= FILTER ================= */}
       <section className="section-gap bg-background">
-        <div className="container mx-auto px-4 text-center mb-12">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((cat, i) => (
-              <button
-                key={i}
-                className={`px-6 py-2 rounded-full border border-border hover:bg-primary hover:text-white transition
-                  ${cat === "All" ? "bg-primary text-white" : "bg-card"}
-                `}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* ================= PROJECT GRID ================= */}
-        <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -74,30 +61,40 @@ const ProjectsPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               viewport={{ once: true }}
-              className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-primary transition"
+              className="group relative rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              {/* Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
-              />
+              {/* IMAGE */}
+              <div className="relative h-[260px] overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
+                {/* DARK OVERLAY */}
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition" />
 
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="text-sm text-primary font-semibold">
+                {/* HOVER BUTTON */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                  <button className="flex items-center gap-2 bg-white text-black px-5 py-2 rounded-xl font-semibold text-sm shadow hover:scale-105 transition">
+                    View Project <ExternalLink size={16} />
+                  </button>
+                </div>
+              </div>
+
+              {/* CONTENT (ALWAYS VISIBLE) */}
+              <div className="p-6">
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                   {project.category}
                 </span>
-                <h3 className="text-xl font-bold text-white mt-1 mb-3">
+
+                <h3 className="text-xl font-bold mt-2 text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
 
-                <button className="inline-flex items-center gap-2 text-white text-sm hover:text-primary transition">
-                  View Project <ExternalLink size={16} />
-                </button>
+                <p className="text-sm text-muted-foreground mt-2">
+                  High quality project with modern UI and scalable architecture.
+                </p>
               </div>
             </motion.div>
           ))}
@@ -107,7 +104,7 @@ const ProjectsPage = () => {
       {/* ================= CTA ================= */}
       <section className="section-gap bg-gradient-to-r from-primary to-accent text-primary-foreground text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-black mb-4">
+          <h2 style={{color: "#fff"}} className="text-3xl md:text-4xl font-heading font-black mb-4">
             Have a Project in Mind?
           </h2>
           <p className="mb-8 text-primary-foreground/80">
