@@ -15,6 +15,8 @@ import ProjectsPage from "./pages/ProjectsPage";
 import WebDevelopment from "./pages/WebDevelopment";
 import MobileAppDevelopment from "./pages/MobileAppDevelopment";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
+import UIUXDesign from "./pages/UIUXDesign";
+import TeamPage from "./pages/TeamPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,8 @@ const App = () => (
           <Route path="/services/web-development" element={<WebDevelopment  />} />
           <Route path="/services/mobile-app" element={<MobileAppDevelopment  />} />
           <Route path="/services/software-development" element={<SoftwareDevelopment   />} />
+          <Route path="/services/ui-ux-design" element={<UIUXDesign   />} />
+          <Route path="/team" element={<TeamPage   />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
